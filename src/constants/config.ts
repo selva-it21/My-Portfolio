@@ -1,3 +1,8 @@
+type TSocialLink = {
+  platform: 'leetcode' | 'github' | 'linkedin';
+  url: string;
+};
+
 type TSection = {
   p: string;
   h2: string;
@@ -13,6 +18,7 @@ type TConfig = {
   hero: {
     name: string;
     p: string[];
+    links: TSocialLink[];
   };
   contact: {
     form: {
@@ -40,13 +46,27 @@ type TConfig = {
 
 export const config: TConfig = {
   html: {
-    title: "John Doe — 3D Portfolio",
-    fullName: "John Doe",
-    email: "johndoe@mail.com",
+    title: "Selva's Portfolio",
+    fullName: "Selva S",
+    email: "selva.it21@gmail.com",
   },
   hero: {
-    name: "John Doe",
-    p: ["I develop 3D visuals, user", "interfaces and web applications"],
+    name: "Selva S",
+    p: ["BIT'25 - Aspiring Software Engineer"],
+    links: [
+      {
+        platform: 'leetcode',
+        url: 'https://leetcode.com/selva-it21',
+      },
+      {
+        platform: 'github',
+        url: 'https://github.com/selva-it21', // Remove duplicate slash
+      },
+      {
+        platform: 'linkedin',
+        url: 'https://www.linkedin.com/in/selva-it21', // Add www
+      },
+    ],
   },
   contact: {
     p: "Get in touch",
@@ -67,19 +87,19 @@ export const config: TConfig = {
     about: {
       p: "Introduction",
       h2: "Overview.",
-      content: `I'm a skilled software developer with experience in TypeScript and
-      JavaScript, and expertise in frameworks like React, Node.js, and
-      Three.js. I'm a quick learner and collaborate closely with clients to
-      create efficient, scalable, and user-friendly solutions that solve
-      real-world problems. Let's work together to bring your ideas to life!`,
+      content: `I'm a highly organized and dedicated Information Technology
+ Engineering student with a strong background in web
+ development, data structures, and database management.
+ Proven leadership and project management skills through
+ successful team projects and hackathon achievements.`,
     },
     experience: {
       p: "What I have done so far",
-      h2: "Work Experience.",
+      h2: "Project Duration.",
     },
     feedbacks: {
-      p: "What others say",
-      h2: "Testimonials.",
+      p: "My Learnings",
+      h2: "Other profiles.",
     },
     works: {
       p: "My work",
